@@ -1,0 +1,6 @@
+framework module Pods_ios_AFNetworking_demo_ios_AFNetworking_demoTests {
+  umbrella header "Pods-ios-AFNetworking-demo-ios-AFNetworking-demoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

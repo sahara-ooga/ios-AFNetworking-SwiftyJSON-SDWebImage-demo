@@ -1,0 +1,24 @@
+platform :ios, '9.0'
+use_frameworks!
+
+def install_pods
+  pod 'AFNetworking', '3.1.0'
+  pod 'SwiftyJSON', '3.1.4'
+  pod 'SDWebImage', '4.0.0'
+end
+
+target 'ios-AFNetworking-demo' do
+  install_pods
+  # Pods for ios-AFNetworking-demo
+
+  target 'ios-AFNetworking-demoTests' do
+    install_pods
+    # Pods for testing
+  end
+
+  target 'ios-AFNetworking-demoUITests' do
+    install_pods
+    # Pods for testing
+  end
+
+end
