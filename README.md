@@ -49,7 +49,7 @@ manager.get("https://api.photozou.jp/rest/search_public.json",
                             // responseObjectをSwiftyJSONのJSONに変換する
                             let json = JSON(responseObject)
                             
-                            // JSONを捜査する
+                            // JSONを操作する
                             
                             // JSONからphoto配列を生成
                             guard let photos = json["info"]["photo"].array else {
@@ -92,7 +92,8 @@ imageView.sd_setImage(with: imageUrl)
 | Cocoa Pods | 1.2.0 |
 | iOS | 10.0〜 |
 
-##OSS 
+## OSS
+
 |OSS name | Version| 
 |---|---|
 | AFNetworking | 3.1.0 |
