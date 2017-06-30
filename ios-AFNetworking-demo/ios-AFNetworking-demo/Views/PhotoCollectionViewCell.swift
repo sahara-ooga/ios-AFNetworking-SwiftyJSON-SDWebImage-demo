@@ -24,6 +24,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         didSet {
             titleLabel.text = photo?.title
             favoriteLabel.text = String.init(format: "★%d", photo?.favoriteNum ?? 0)
+            
+            //SDWebImage
             imageView.image = nil
             imageView.sd_setImage(with: URL(string: (photo?.thumbnailUrlString)!))
         }
