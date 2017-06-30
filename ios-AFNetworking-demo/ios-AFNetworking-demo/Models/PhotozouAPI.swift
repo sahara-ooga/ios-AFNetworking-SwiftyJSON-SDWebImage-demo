@@ -39,6 +39,7 @@ class PhotozouAPI: NSObject {
                             guard let photos = json["info"]["photo"].array else {
                                 fatalError("jsonが不正")
                             }
+                            
                             var photoList = PhotoList()
                             for var photoInfo in photos {
                                 var photo = Photo()
@@ -49,7 +50,6 @@ class PhotozouAPI: NSObject {
                                 if let favoriteNum = photoInfo["favorite_num"].int {
                                     photo.favoriteNum = favoriteNum
                                 }
-                                
                                 if let thumbnailUrl = photoInfo["thumbnail_image_url"].string {
                                     photo.thumbnailUrlString = thumbnailUrl
                                 }

@@ -43,7 +43,10 @@ extension ViewController: UISearchBarDelegate {
                 weakSelf.collectionView.reloadData()
                 
             case .failure(let error):
-                let alertController = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "",
+                                                        message: error.localizedDescription,
+                                                        preferredStyle: .alert)
+                
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAction)
                 weakSelf.present(alertController, animated: true, completion: nil)
